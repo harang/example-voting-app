@@ -3,6 +3,7 @@ pipeline {
   stages {
     stage('set EKS') {
       steps {
+        setAccountAlias 'awsjenkins'
         sh '''aws eks update-kubeconfig \\--region ap-northeast-2 \\--name jenkins-test
 kubectl get svc'''
       }
