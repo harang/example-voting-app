@@ -4,10 +4,10 @@ pipeline {
     stage('set EKS') {
       steps {
         sh '''aws configure
-AKIA4J275QUWCAX22O2R
-M9PAjJ5gbXYsJbbE7DtvWaOQVQxdGCzobQjnzLDm
-ap-northeast-2
-json'''
+\\ AKIA4J275QUWCAX22O2R
+\\ M9PAjJ5gbXYsJbbE7DtvWaOQVQxdGCzobQjnzLDm
+\\ ap-northeast-2
+\\ json'''
         sh '''aws eks update-kubeconfig \\--region ap-northeast-2 \\--name jenkins-test
 '''
         sh 'kubectl get svc'
